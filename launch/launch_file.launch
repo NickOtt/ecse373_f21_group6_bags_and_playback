@@ -1,0 +1,8 @@
+<launch>
+
+    <include file="$(find navvis_description)/launch/launch_file.launch" >
+        <arg name="use_xacro" value="true" />   
+        <arg name="file" value="$(find navvis_rosbags)/urdf/navvis.xacro" />
+    </include>
+    
+</launch>
