@@ -9,7 +9,7 @@
     <arg name="use_xacro" value="true" />   
     <arg name="file" value="$(find navvis_rosbags)/urdf/navvis.xacro" />
     <arg name="config" value="$(arg config_file)" />
-    <arg name="use_robot_state_publisher" value="false" />
+    <arg name="use_robot_state_publisher" value="true" />
   </include>
   
   <node pkg="rqt_bag" type="rqt_bag" name="rqt_bag" args="/tf_trajectory:=tf --clock" />
