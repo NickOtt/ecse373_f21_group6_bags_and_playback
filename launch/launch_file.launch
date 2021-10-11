@@ -1,8 +1,18 @@
 <launch>
 
-    <include file="$(find navvis_description)/launch/launch_file.launch" >
-        <arg name="use_xacro" value="true" />   
-        <arg name="file" value="$(find navvis_rosbags)/urdf/navvis.xacro" />
-    </include>
-    
+  <arg name="use_sim_time" default="true" />
+  <arg name="config_file" default="config.rviz" />
+  <rosparam if="$(arg use_sim_time)" param="use_sim_time">true</rosparam>
+  <rosparam unless="$(arg use_sim_time)" param="use_sim_time">false</rosparam>
+  
+  <include file="$(find navvis_description)/launch/launch_file.launch" >
+    <arg name="use_xacro" value="true" />   
+    <arg name="file" value="$(find navvis_rosbags)/urdf/navvis.xacro" />
+    <arg name="config" value="$(arg config_file)" />
+    <arg name="use_robot_state_publisher" value="false" />
+  </include>
+  
+  <node pkg="rqt_bag" type="rqt_bag" name="rqt_bag" args="/tf_trajectory:=tf --clock" />
+  <node pkg="map_server" type="map_server" name="map_server" args="$(find maps_glennan)/maps/glennan5_map.yaml" />
+   
 </launch>
