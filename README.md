@@ -27,17 +27,17 @@ git clone -b lab_4_dependence git@github.com:cwru-courses/ecse373_f21_yxz2309_na
  roslaunch navvis_rosbags launch_file.launch use_sim_time:=false
  ```
 
- ##### Display the robot with lazer
- Use the following command to display the robot and lazer:
+ ##### Display the robot with laser
+ Use the following command to display the robot and laser:
  ```
- roslaunch navvis_rosbags launch_file.launch config_file:=config_with_lazer.rviz
+ roslaunch navvis_rosbags launch_file.launch config_file:=config_with_laser.rviz
  ```
  Load the bag file through rqt_bag gui, than right click the blank and select Pulish -> Publish All. Than click the play button. 
  
- ##### Display the robot with lazer and map
- Use the following command to display the robot with lazer and map
+ ##### Display the robot with laser and map
+ Use the following command to display the robot with laser and map
  ```
- roslaunch navvis_rosbags launch_file.launch config_file:=config_with_lazer_and_map.rviz
+ roslaunch navvis_rosbags launch_file.launch config_file:=config_with_laser_and_map.rviz
  ```
  Load the bag file through rqt_bag gui, than right click the blank and select Pulish -> Publish All. Than click the play button. 
  
