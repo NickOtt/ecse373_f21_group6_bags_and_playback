@@ -10,7 +10,7 @@ Use the following command to colne `maps_glennan`:
 git clone git@github.com:cwru-eecs-373/maps_glennan.git
 ```
 
-Use the following command to colne the `lab_4_dependence` branch of `navvis_description`:
+Use the following command to clone the `lab_4_dependence` branch of `navvis_description`:
 
 ```
 git clone -b lab_4_dependence git@github.com:cwru-courses/ecse373_f21_yxz2309_navvis_description.git
